@@ -25,7 +25,12 @@ public class Main
         Collections.sort(sortedByName);
         List<Player> sortedByLevel = new ArrayList<>(players);
         Collections.sort(sortedByLevel, new CompareByLevel());
-        printPlayers(sortedByLevel);
+        List<Player> sortedByHealth = new ArrayList<>(players);
+        Collections.sort(sortedByHealth, new CompareByHealth());
+        //printPlayers(sortedByHealth);
+        List<Player> sortedByIntelligence = new ArrayList<>(players);
+        Collections.sort(sortedByIntelligence, new CompareByIntelligence());
+        printPlayers(sortedByIntelligence);
     }
 
     private static void printPlayers(List<Player> players)
